@@ -1,0 +1,211 @@
+h2{
+    margin-top:7rem;
+
+}
+.cart-container{
+    display:flex;
+    flex-direction: column;
+}
+.cart-item{
+    flex:1;
+    margin-top: 10rem;
+    margin-left:5rem;
+    width:60%;
+    position: relative;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left:0.5rem;
+    padding-right: 2rem;
+    background-color:whitesmoke;
+    justify-content: center;
+    border-radius: 10px;
+}
+.details{
+    display:flex;
+    flex-direction: column;
+    row-gap: 2.8rem;
+}
+.product-name{
+    font-size: 1rem;
+    font-family: cinzel;
+    font-weight: bold;
+}
+.short-description{
+    display:flex;
+    column-gap: 2rem;
+    font-weight:bold;
+    font-family:League Spartan;
+}
+
+.product-image{  /* column 1 of the cart container */
+    max-width:90%;
+    border-radius:10px;
+}
+.quantity-price-details{ /* column 2 of the cart container */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap:2rem;
+    width:48%;
+}
+.quantity-details{
+    flex-basis:50%;
+}
+.quantity-header{
+    font-family:League Spartan;
+    font-weight:600;
+}
+.quantity{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.quantity-count{
+    padding-left:1.5rem;
+    padding-right:2rem;
+    margin-top:1rem;
+    font-family: League Spartan;
+    
+}
+.product-price-section{
+
+}
+.per-item-price-header{
+    font-family:League Spartan;
+    font-weight:600;
+    
+
+}
+.price{
+    margin-top:1rem;
+    font-family:League Spartan;
+}
+.buttons{
+    display:flex;
+    column-gap:1rem;
+    flex-basis:100%;
+
+}
+.increment-quantity-button,.decrement-quantity-button{
+    display: none;
+    background: transparent;
+    border:none;
+    font-size:1.5rem;
+    font-family: League Spartan;
+    cursor: pointer;
+}
+.is-editing-quantity .increment-quantity-button{
+    display:initial;
+}
+.is-editing-quantity .decrement-quantity-button{
+    display: initial;
+}
+.update-button{
+    background:transparent;
+    cursor:pointer;
+    font-size: 0.8rem;
+    font-family: League Spartan;
+    font-weight: bold;
+    border:none;
+
+}
+.update-button:hover{
+    color:rgb(10, 143, 34);
+    transition-duration: 0.5s;
+
+}
+.save-button:hover{
+    color:green;
+}
+.delete-button:hover{
+    color:rgb(102, 8, 8);
+    transition-duration: 0.5s;
+
+}
+.delete-button{
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    font-size: 0.8rem;
+    font-family: League Spartan;
+    font-weight: bold;
+}
+.stock-information{ /* column 3 of the cart container */
+    justify-self:right;
+    font-weight: bold;
+    color:rgb(9, 42, 9);
+    font-size:1.2rem;
+}
+.delivery-option-section{ /*column 1 & row 2 of the cart container */ 
+    display:flex;
+    flex-direction: column;
+    grid-column: span 2;
+    row-gap: 2rem;
+    width:50%;
+    grid-column: span 3;
+
+}
+.delivery-option-header{ /*column 1 & row 2 of the cart container,but it spans to three columns in the second row*/
+    font-family: League Spartan;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.delivery-option{
+    display:flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+.delivery-date{ 
+    font-family:League Spartan;
+    font-weight: 600;
+    line-height: 1.5rem;
+
+}
+.shipping-cost{
+    font-size:0.8rem;
+    line-height:1rem;
+    font-family: League Spartan;
+}
+.total-price-calculation{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px gray;
+    padding-top:2rem;
+    font-family: League Spartan;
+}
+.total-price{
+    color:rgb(1, 81, 1);
+    font-weight: 600;
+}
+
+
+/*css for payment summary*/
+
+.payment-summary-container{
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    right:4rem;
+    top:10rem;
+    row-gap:2rem;
+    background-color: whitesmoke;
+    padding:5rem;
+    padding-top:1rem;
+    padding-left:2rem;
+
+}
+.payment-summary-column{
+    font-weight: bold;
+    font-family: League Spartan;
+}
+
+@media (max-width:720px){
+    html{
+        font-size:12px;
+    }
+}

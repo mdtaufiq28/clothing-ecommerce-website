@@ -1,0 +1,531 @@
+@keyframes fadein{
+    from{opacity:0; visibility: hidden;}
+    to{opacity:1; visibility: visible;}
+}
+body{
+    margin:0;
+    padding:0;
+    padding-bottom:250px;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+.menu-header{
+    display: flex;
+    justify-content: space-around;
+    padding:1rem;
+    border-bottom:rgb(8, 82, 143);
+    position: fixed;
+    background-color: black;
+    color:white;
+    left:0;
+    right:0;
+    z-index: 2;
+    font-family:League Spartan;
+    font-weight:bold;
+    font-size: 1rem;
+}
+.menu-option{
+    cursor: pointer;
+}
+.menu-option::after{
+    content:'';
+    display: block;
+    border-bottom:3px solid steelblue;
+    transform: scaleX(0);
+    padding-top:0.2rem;
+    
+}
+.menu-option:hover::after{
+    transform: scaleX(1);
+    transition-duration: 0.3s;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.header-image-container{
+    display:flex;
+    position: relative;
+    width:100%;
+}
+.Header-slide-image{
+    max-width:100%;
+    height:100vh;
+    flex:1;
+}
+.travel-outfit-showcase-image{
+    height:100vh;
+}
+.header-content-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:0;
+    right: 0;
+    color:white;
+    row-gap:1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.header-text-1{
+    font-size: 2rem;
+    font-family: League Spartan;
+    font-weight: bold;
+    transition-timing-function: ease-in;
+
+}
+.header-text-2{
+    font-size:1.5rem;
+    font-weight: 600;
+    font-family:League Spartan;
+}
+.header-shop-button{
+    font-family:cinzel;
+    font-size: 1rem;
+    color:white;
+    border: 1px solid white;
+    border-radius:10px;
+    padding:1rem;
+    margin-top:1rem;
+    background-color: transparent;
+    cursor:pointer;
+
+}
+.header-shop-button:hover,.showcase-shop-now-button:hover{
+    background-color: white;
+    color:black;
+    transition-duration: 0.5s;
+}
+.product-showcase-container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    max-width: 100%;
+}
+.showcase-header{
+    align-self: center;
+    margin-top:2rem;
+    font-size:1.5rem;
+    font-family: cinzel;
+    font-size:1.5rem;
+    color:rgb(66, 64, 64);
+    font-weight:bold;
+}
+.showcase-image-container{
+    display:flex;
+    width:100%;
+    margin-top:2rem;
+    position: relative;
+
+}
+.showcase-image{
+    max-width: 100%;
+    max-height: 100%;
+    flex:1;
+}
+.showcase-content-section-grid{
+    position:absolute;
+    top:0;
+    bottom:0;
+    display:flex;
+    align-items: center;
+    width:80%;
+}
+.showcase-text-container{
+    color:white;
+    max-width: 100%;
+    flex-basis:30%;
+    display:flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+    padding-left: 4rem;
+}
+.showcase-text-1{
+    font-size:2rem;
+    color:white;
+    font-weight: bold;
+    font-family: cinzel;
+
+}
+.showcase-text-2{
+    font-size:1.3rem;
+    color:white;
+    font-weight: bold;
+    font-family: cinzel;
+
+}
+.showcase-shop-now-button{
+    background:transparent;
+    border: 1px solid white;
+    color:white;
+    border-radius:1rem;
+    font-family: League Spartan;
+    cursor: pointer;
+    padding:1rem 2rem 1rem 2rem;
+    font-size:1.2rem;
+}
+.fresh-arrival-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top:solid 2px gray;
+    border-bottom:solid 2px gray;
+    margin-top:2rem;
+    padding-bottom:2rem;
+}
+.fresh-arrival-title{
+    
+    margin-top:2rem;
+    font-size:1.5rem;
+    font-family: cinzel;
+    font-size:1.5rem;
+    color:rgb(66, 64, 64);
+    font-weight:bold;
+
+}
+.fresh-arrival-image-container{
+    display: flex;
+    width:90%;
+    column-gap:2rem;
+    justify-content: center;
+    margin-top:2rem;
+}
+.fresh-arrival-image{
+    max-width:20%;
+    max-height:50%;
+    flex:1;
+    border-radius:0.5rem;
+}
+.middle-image{
+    max-width:50%;
+    max-height:40%;
+}
+.bottom-image{
+    max-height:30%;
+    max-width:30%;
+}
+.best-seller-section{
+    display: flex;
+    flex-direction:column;
+    max-width:100%;
+    margin-top:3rem;
+}
+.best-seller-header{
+    color:rgb(86, 85, 85);
+    font-size:1rem;
+    font-weight:bold;
+    font-family: cinzel;
+    margin-left:2rem;
+    
+}
+.best-seller-flex{
+    display: flex;
+    padding: 2rem;
+    column-gap: 3rem;
+    overflow-x: scroll;
+}
+.best-seller-flex::-webkit-scrollbar{
+    display:none;
+}
+.best-seller-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:15rem;
+    row-gap: 2rem;
+    box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.2) ;
+    padding:1rem;
+    border-radius:1rem;
+    flex:0 0 auto;
+
+}
+.best-seller-image-container{
+    position:relative;
+    grid-column: span 2;
+    max-width:100%;
+    max-height: 100%;
+    
+}
+.best-seller-image{
+    height:20rem;
+    max-width:100%;
+    max-height: 100%;
+    border-radius:1rem ;
+}
+.best-seller-tag{
+    position:absolute;
+    bottom:1rem;
+    left:0.5rem;
+    background-color:black;
+    color:white;
+    background-color:black;
+    border-radius: 15px;
+    padding:10px;
+    padding-left:1rem;
+    padding-right: 1rem;
+    font-size:0.8rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.discount-percentage-tag{
+    position:absolute;
+    top:0;
+    right:0;
+    color:white;
+    background-color:indianred;
+    padding:10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 0.3rem;
+    font-size:0.8rem;
+
+}
+.best-seller-product-title{
+    grid-column:span 2;
+    font-family: cinzel;
+    color:rgb(99, 98, 98);
+    font-weight: 600;
+    font-size:0.8rem;
+    cursor: pointer;
+    height:3.2rem;
+    text-wrap: wrap;
+
+}
+.price-details{
+    display: flex;
+    column-gap:2rem;
+}
+.price-before-discount{
+    color:rgb(99, 98, 98);
+    text-decoration: line-through;
+    font-family:cinzel;
+}
+.price-after-discount{
+    color:teal;
+    font-weight: bold;
+    font-family:cinzel;
+}
+.add-to-cart-button{
+    color:white;
+    background-color:black;
+    border:none;
+    border-radius: 20px;
+    grid-column: span 2;
+    cursor:pointer;
+    font-size:0.8rem;
+    padding-top:0.8rem;
+    padding-bottom:0.8rem;
+    font-weight:600;
+    font-family: League Spartan;
+}
+.add-to-cart-button:hover{
+    opacity:0.8;
+    transition-duration: 0.5s;
+}
+.category-showcase-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    margin-left:2rem;
+    margin-top: 3rem;
+
+}
+.category-element{
+    position: relative
+    
+}
+.category-showcase-image{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 300px;
+    border:solid 2px teal;
+    
+}
+.category-showcase-title{
+    position: absolute;
+    bottom:1rem;
+    left:1.2rem;
+    font-size:1.4rem;
+    color:white;
+    font-family:cinzel;
+    font-weight: bold;
+}
+.category-showcase-title-2,.category-showcase-title-4{
+    color:rgb(2, 83, 83);
+}
+.review-section{
+    display: flex;
+    flex-direction: column;
+    height:80vh;
+    margin-top:3rem;
+    row-gap: 3rem;
+    align-items: center;
+    max-width: 100%;
+    
+}
+.review-container{
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    row-gap: 3rem;
+    height: 20%;
+    width:80%;
+    padding:4rem;
+    padding-bottom:7.5rem;
+}
+.review-header{
+    color:rgb(72, 71, 71);
+    font-family: cinzel;
+    align-self: center;
+}
+.review-content{
+    color:rgb(94, 92, 92);
+    font-size:1.8rem;
+    font-family: League Spartan;
+    line-height:3rem;
+
+}
+.customer-name{
+    align-self: flex-end;
+    font-size: 1.2rem;
+}
+.bottom-section{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding:4rem 2rem 2rem 4rem;
+}
+.bottom-section-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color:white;
+    column-gap:10rem;
+    font-family: League Spartan;
+    font-size:1rem;
+    font-weight:500;
+}
+.bottom-section-right{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.newsletter-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.newsletter-heading{
+    font-family:League Spartan;
+}
+.newsletter-container{
+    display:flex;
+    min-width: 0;
+}
+.newsletter-input{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius:3px;
+    border-bottom-right-radius: 3px;
+    padding-left: 10px;
+    font-family:League Spartan;
+    font-weight: bold;
+    border: 2px solid white;
+    background-color: black;
+    color:white;
+    font-size:1rem;
+    flex:2;
+    min-width:0;
+}
+.newsletter-input:focus{
+    outline:0px solid white;
+
+
+}
+.subscribe-button{
+    min-width:0;
+    transition-duration:1s;
+    background-color:rgb(53, 51, 51);
+    border-color:#fdfeff;
+    cursor: pointer;
+    border-style: solid;
+    padding:15px;
+    flex:1;
+    color:white;
+    border-width: 2px;
+    font-family:League Spartan ;
+    font-weight:bold;
+    font-size:1vw;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.subscribed-button{
+    background-color:orangered;
+    border-color:#fdfeff;
+    cursor: pointer;
+    border-style: solid;
+    padding:15px;
+    flex:1;
+    color:white;
+    border-width: 2px;
+    font-family:League Spartan ;
+    font-weight:bold;
+    font-size:1vw;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+.copyright-information-container{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+.copyright-information{
+    color:white;
+    font-size:0.6rem;
+    
+}
+
+
+
+
+
+
+@media (max-width:720px){
+    html{
+        font-size:11px;
+    }
+}
+
+@media (max-width:576px){
+    html{
+        font-size:7px;
+    }
+}
+
+@media (min-width:576px) and (max-width:670px){
+    html{
+        font-size:9px;
+    }
+}
+
+@media (min-width:300px) and (max-width:520px){
+    html{
+        font-size:7px;
+    }
+}
